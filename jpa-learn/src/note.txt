@@ -1,0 +1,10 @@
+JPA是一种规范，本例用Hibernate来实现。相当于是Hibernate的变种
+使用JPA持久化对象的步骤
+	1.创建persistence.xml，在这个文件中配置持久化单元
+		-需要指定跟那个数据库进行交互
+		-需要指定JPA使用哪个持久化的框架以及配置该框架的基本属性
+	2.创建实体类，使用annotation来描述实体类跟数据库表之间的映射关系
+	3.使用JPA API完成数据的增、删、改、查
+		-创建EntityManagerFactory(对应Hibernate中的SessionFactory)
+		-创建EntityManager(对应Hibernate中的Session)
+		
