@@ -1,5 +1,7 @@
 package com.kinghorse.first;
 
+import java.util.Date;
+
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
@@ -21,8 +23,12 @@ public class MainTest {
 		
 		transaction.begin();
 		//4.进行持久化操作
-		Customer customer = new Customer("Tom", "Tom@163.com", 20);
+		/*Student studnet = new Student("Davied", 20, new Date());
 		
+		entityManager.persist(studnet);*/
+		Customer customer = new Customer("Tom", "Tom@163.com", 20, new Date(), new Date());
+		
+		//类似于Hibernate的save方法 ；与Hibernate的不同之处是，若对象有id ，则不能执行insert操作，而会抛出异常
 		entityManager.persist(customer);
 		
 		//5.提交事务

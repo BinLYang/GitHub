@@ -10,7 +10,8 @@
 		
 		<!-- 添加持久化类 -->
 		<class>com.kinghorse.first.Customer</class>
-		
+		<class>com.kinghorse.first.Student</class>
+		<class>com.kinghorse.first.Order</class>
 		<properties>
 			<!-- 连接数据库信息 -->
 			<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
