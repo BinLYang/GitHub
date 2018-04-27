@@ -34,4 +34,14 @@ JPA相关接口、类
 		执行保存时，若先保存 n的一端，在保存1 的一端，默认情况下，会多出4条update语句。两边都维护关联关系的原因
 		在进行双向 1-n关联关系时，建议用n的一方来维护关联关系，而1的一方不维护关联关系，这样会减少SQL语句通过OneToMany(mapperBy="customer")并且不定义@JoinColumn
 		
+	双向1-1
+	
+	
+二级缓存：
+	persistence.xml中进行配置	
+		对应的Entity 上添加@Cacheable(true)
+		
+JPQL
+	关联查询  LEFT OUT JOIN FETCH 
+		
 		
